@@ -1,6 +1,7 @@
 import React from 'react'
+import '../Login/login.css'
 import { useState } from 'react'
-import firebaseApp from '../credenciales';
+import firebaseApp from '../../credenciales';
 import { 
   getAuth, 
   createUserWithEmailAndPassword, 
@@ -31,7 +32,7 @@ export const Login = () => {
   console.log(password, email)
   return (
     <>
-      <h1> {estaRegistrandose ? "Registra\'t " : "Incia sessió"}</h1>
+      <h1> {estaRegistrandose ? "Registra\'t " : "Inicia sessió"}</h1>
       <form >
         <input type='text' placeholder='Email' onChange={ (e) => setEmail(e.target.value)}/>
         <input type='password' placeholder='Contraseña' onChange={ (e) => setPassword(e.target.value)} />

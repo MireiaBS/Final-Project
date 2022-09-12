@@ -1,0 +1,30 @@
+.div-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:1cm;
+
+}
+
+.login-text {
+    display: flex;
+    flex-direction: row;    
+    padding-left:0.3cm;
+}
+
+.login-img {
+    height: 1cm;
+}
+
+.p-hello {    
+    color:white;    
+    background-color: transparent;
+    border:none;
+    font-size: 18px;
+
+}
+
+.p-hello:last-child {
+    cursor: pointer;
+}

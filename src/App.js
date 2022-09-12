@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Home } from './componentes/Home';
-import { Login } from './componentes/Login';
+import { Nav } from './componentes/Nav/Nav';
 import "./css/css.css"
 import firebaseApp from './credenciales';
 import {getAuth, onAuthStateChanged} from "firebase/auth"
@@ -16,7 +15,7 @@ function App() {
   onAuthStateChanged(auth, (usuarioFirebase) => {
 
     if(usuarioFirebase) {
-      // codigo ara sesion iniciada
+      // codigo para sesion iniciada
       setUser(usuarioFirebase)
     } else {
       // codigo en caso de que no haya sesion iniciada
@@ -25,7 +24,9 @@ function App() {
   })
   
   
-  return <>{user ? <Home/> : <Login />} </>
+  return <>
+  <Nav  user={user}/>
+  </>
 }
 
 export default App;
